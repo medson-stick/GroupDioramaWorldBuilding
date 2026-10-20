@@ -68,8 +68,15 @@ Build/*/**
 Saved/*
 
 # Compiled source files for the engine to use
-Intermediate/
+Intermediate/*
 Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Unreal Engine temporary and generated folders
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
