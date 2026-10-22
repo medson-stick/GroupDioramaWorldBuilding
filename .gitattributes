@@ -1,0 +1,56 @@
+# Auto-detect text files and perform LF normalization
+* text=auto
+
+# Declare Git LFS macros for clean formatting
+[attr]lfs filter=lfs diff=lfs merge=binary -text
+
+# Unreal Engine core asset types
+*.uasset lfs
+*.umap lfs
+
+# Common 3D asset and animation formats
+*.fbx lfs
+*.obj lfs
+*.max lfs
+*.blend lfs
+*.dae lfs
+*.3ds lfs
+
+# Texture and image formats
+*.png lfs
+*.jpg lfs
+*.jpeg lfs
+*.tga lfs
+*.psd lfs
+*.exr lfs
+*.hdr lfs
+*.tif lfs
+*.tiff lfs
+
+# Audio formats
+*.wav lfs
+*.mp3 lfs
+*.ogg lfs
+*.flac lfs
+
+# Video and multimedia formats
+*.mp4 lfs
+*.mkv lfs
+*.avi lfs
+*.mov lfs
+
+# Compiled libraries and builds (if you tracking them)
+*.dll lfs
+*.exe lfs
+*.dylib lfs
+*.so lfs
+*.a lfs
+*.lib lfs
+
+
+# Treat Unreal assets as binary and lock them to prevent simultaneous edits
+*.uasset filter=lfs diff=lfs merge=lfs -text lockable
+*.umap filter=lfs diff=lfs merge=lfs -text lockable
+
+# Explicitly ensure landscape/external actors are handled as binary
+*.unreal filter=lfs diff=lfs merge=lfs -text lockable
