@@ -46,3 +46,11 @@
 *.so lfs
 *.a lfs
 *.lib lfs
+
+
+# Treat Unreal assets as binary and lock them to prevent simultaneous edits
+*.uasset filter=lfs diff=lfs merge=lfs -text lockable
+*.umap filter=lfs diff=lfs merge=lfs -text lockable
+
+# Explicitly ensure landscape/external actors are handled as binary
+*.unreal filter=lfs diff=lfs merge=lfs -text lockable
